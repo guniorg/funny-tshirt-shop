@@ -23,13 +23,23 @@
       position: relative;
       overflow: hidden;
     }
+    .hero video.bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.2;
+    }
     .hero-content { z-index: 1; max-width: 600px; }
     .hero h1 { font-size: 2.2rem; margin-bottom: 1rem; font-weight: 700; }
     .hero p { margin-bottom: 1rem; font-size: 1.1rem; }
     .cta-buttons { display: flex; flex-direction: column; gap: 10px; margin-top: 1rem; }
     .btn-yellow { background: #ffd600; color: black; padding: 10px 20px; font-weight: bold; border-radius: 8px; }
     .btn-outline { border: 2px solid white; color: white; padding: 10px 20px; border-radius: 8px; background: transparent; cursor: pointer; }
-    .preview-box { background: white; color: #333; border-radius: 16px; padding: 40px 20px; box-shadow: 0 0 20px rgba(0,0,0,0.1); margin-top: 2rem; max-width: 300px; }
+    .preview-box { background: white; color: #333; border-radius: 16px; padding: 40px 20px; box-shadow: 0 0 20px rgba(0,0,0,0.1); margin-top: 2rem; max-width: 300px; z-index: 1; }
     .preview-box p { margin-top: 10px; font-size: 16px; }
     .badge { position: relative; background: #f44336; color: white; font-size: 12px; padding: 5px 10px; border-radius: 20px; display: inline-block; margin-top: 10px; }
     .features, .about, .newsletter, footer { padding: 40px 20px; text-align: center; }
@@ -72,7 +82,24 @@
   </style>
 </head>
 <body>
-  <!-- body content unchanged -->
+  <section class="hero">
+    <video class="bg-video" autoplay muted loop playsinline>
+      <source src="/godislove1.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>Funny T-Shirts That Make You Smile</h1>
+      <p>Premium 100% cotton t-shirts with hilarious Korean and English phrases</p>
+      <div class="cta-buttons">
+        <div class="btn-yellow">33% OFF for new customers!</div>
+        <button class="btn-outline">Shop Now</button>
+        <button class="btn-outline">Learn More</button>
+      </div>
+    </div>
+    <div class="preview-box">
+      <h3>LOL 웃음 😅</h3>
+      <p>Funny in any language</p>
+      <span class="badge">33% OFF</span>
+    </div>
+  </section>
 </body>
 </html>
-
