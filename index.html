@@ -1,7 +1,166 @@
-
 <!DOCTYPE html>
-<!-- The full HTML content from the canvas document goes here. -->
 <html lang="en">
-<head><meta charset="UTF-8"><title>Funny T-Shirt Shop</title></head>
-<body><h1>Funny T-Shirt Shop</h1></body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infirst Global T-Shirts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { background: #fff; color: #333; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+    nav ul { display: flex; gap: 20px; list-style: none; }
+    .lang-switch { display: flex; gap: 10px; background: #f1f1f1; padding: 5px 10px; border-radius: 20px; }
+    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; background: #755efc; color: white; padding: 40px 20px; text-align: center; position: relative; overflow: hidden; }
+    .hero-content { z-index: 1; max-width: 600px; }
+    .hero h1 { font-size: 2.2rem; margin-bottom: 1rem; font-weight: 700; }
+    .hero p { margin-bottom: 1rem; font-size: 1.1rem; }
+    .cta-buttons { display: flex; flex-direction: column; gap: 10px; margin-top: 1rem; }
+    .btn-yellow { background: #ffd600; color: black; padding: 10px 20px; font-weight: bold; border-radius: 8px; }
+    .btn-outline { border: 2px solid white; color: white; padding: 10px 20px; border-radius: 8px; background: transparent; cursor: pointer; }
+    .preview-box { background: white; color: #333; border-radius: 16px; padding: 40px 20px; box-shadow: 0 0 20px rgba(0,0,0,0.1); margin-top: 2rem; max-width: 300px; }
+    .preview-box p { margin-top: 10px; font-size: 16px; }
+    .badge { position: relative; background: #f44336; color: white; font-size: 12px; padding: 5px 10px; border-radius: 20px; display: inline-block; margin-top: 10px; }
+    .features, .about, .newsletter, footer { padding: 40px 20px; text-align: center; }
+    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .features div { background: #f5f5ff; border-radius: 12px; padding: 20px; flex: 1; min-width: 220px; }
+    .products { padding: 40px 20px; text-align: center; }
+    .products h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .products p { color: gray; margin-bottom: 2rem; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .product-card { background: #f8f8f8; padding: 20px; border-radius: 16px; }
+    .product-card img { max-width: 100%; height: auto; margin-bottom: 10px; }
+    .product-card h3 { margin: 10px 0; font-size: 1rem; }
+    .price { color: red; font-weight: bold; }
+    .old-price { text-decoration: line-through; color: gray; margin-left: 8px; }
+    .btn-cart { background: #5b3dfc; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer; width: 100%; margin-top: 10px; }
+    .about p { max-width: 600px; margin: 0 auto; line-height: 1.6; }
+    .newsletter input { padding: 10px; border-radius: 6px; width: 60%; max-width: 300px; border: 1px solid #ccc; margin-right: 10px; }
+    .newsletter button { background: #5b3dfc; color: white; padding: 10px 20px; border: none; border-radius: 8px; }
+    footer { background: #111; color: white; text-align: left; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-around; padding: 40px 20px; }
+    footer div { max-width: 300px; }
+    footer p, footer h4 { margin-bottom: 8px; }
+    @media (max-width: 768px) {
+      .hero, .features { flex-direction: column; align-items: center; }
+      .hero-content, .preview-box { width: 100%; max-width: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Infirst Global</strong></div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Products</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <span>US</span><span>KR</span><span>VN</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Funny T-Shirts That Make You Smile</h1>
+      <p>Premium 100% cotton t-shirts with hilarious Korean and English phrases</p>
+      <div class="btn-yellow">33% OFF for new customers!</div>
+      <div class="cta-buttons">
+        <button class="btn-outline">Shop Now</button>
+        <button class="btn-outline">Learn More</button>
+      </div>
+    </div>
+    <div class="preview-box">
+      <p><strong>LOL 웃음 😅</strong><br>Funny in any language</p>
+      <span class="badge">33% OFF</span>
+    </div>
+  </section>
+
+  <section class="features">
+    <div>
+      <h4>Premium Quality</h4>
+      <p>100% soft cotton for maximum comfort</p>
+    </div>
+    <div>
+      <h4>Special Price</h4>
+      <p>199,000 VND with free shipping</p>
+    </div>
+    <div>
+      <h4>Funny Designs</h4>
+      <p>Unique phrases in Korean and English</p>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Our T-Shirt Collection</h2>
+    <p>Choose from our selection of hilarious designs that will make everyone smile</p>
+    <div class="product-grid">
+      <div class="product-card"><img src="/shirt1.png" alt="LOL Smile" /><h3>LOL Smile T-Shirt</h3><div><span class="price">199,000₫</span><span class="old-price">299,000₫</span></div><button class="btn-cart" onclick="buyNow()">Add to Cart</button></div>
+      <div class="product-card"><img src="/shirt2.png" alt="Kimchi Power" /><h3>Kimchi Power T-Shirt</h3><div><span class="price">199,000₫</span><span class="old-price">299,000₫</span></div><button class="btn-cart" onclick="buyNow()">Add to Cart</button></div>
+      <div class="product-card"><img src="/shirt3.png" alt="Coffee Addict" /><h3>Coffee Addict T-Shirt</h3><div><span class="price">199,000₫</span><span class="old-price">299,000₫</span></div><button class="btn-cart" onclick="buyNow()">Add to Cart</button></div>
+      <div class="product-card"><img src="/shirt4.png" alt="Nap Queen" /><h3>Nap Queen T-Shirt</h3><div><span class="price">199,000₫</span><span class="old-price">299,000₫</span></div><button class="btn-cart" onclick="buyNow()">Add to Cart</button></div>
+      <div class="product-card"><img src="/shirt5.png" alt="Foodie" /><h3>Foodie T-Shirt</h3><div><span class="price">199,000₫</span><span class="old-price">299,000₫</span></div><button class="btn-cart" onclick="buyNow()">Add to Cart</button></div>
+      <div class="product-card"><img src="/shirt6.png" alt="K-Drama Fan" /><h3>K-Drama Fan T-Shirt</h3><div><span class="price">199,000₫</span><span class="old-price">299,000₫</span></div><button class="btn-cart" onclick="buyNow()">Add to Cart</button></div>
+      <div class="product-card"><img src="/shirt7.png" alt="Selfie King" /><h3>Selfie King T-Shirt</h3><div><span class="price">199,000₫</span><span class="old-price">299,000₫</span></div><button class="btn-cart" onclick="buyNow()">Add to Cart</button></div>
+      <div class="product-card"><img src="/shirt8.png" alt="Spicy" /><h3>Spicy T-Shirt</h3><div><span class="price">199,000₫</span><span class="old-price">299,000₫</span></div><button class="btn-cart" onclick="buyNow()">Add to Cart</button></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About Infirst Global</h2>
+    <p>Infirst Global is a Korean-based distribution company operating in Vietnam. We specialize in bringing fun and unique products to our customers, with a focus on high-quality materials and designs that make people smile.
+    <br><br>Our t-shirts are made from 100% premium cotton, ensuring comfort and durability. Each design is carefully created to bring joy and laughter to both the wearer and those around them.</p>
+  </section>
+
+  <section class="newsletter">
+    <h2>Get 33% Off Your First Order</h2>
+    <p>Sign up for our newsletter and receive a discount code for your first purchase</p>
+    <input type="email" placeholder="Email">
+    <button>Subscribe</button>
+  </section>
+
+  <footer>
+    <div>
+      <h4>Infirst Global</h4>
+      <p>Korean-based distribution company in Vietnam</p>
+      <p>
+        <a href="#" style="color: white;">Facebook</a> |
+        <a href="#" style="color: white;">Twitter</a> |
+        <a href="#" style="color: white;">Instagram</a>
+      </p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p>Home</p>
+      <p>Products</p>
+      <p>About Us</p>
+      <p>Contact</p>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <p>📍 Seoul, South Korea & Ho Chi Minh City, Vietnam</p>
+      <p>📧 info@infirstglobal.com</p>
+      <p>📞 +84 28 1234 5678</p>
+    </div>
+  </footer>
+
+  <script>
+    async function buyNow() {
+      try {
+        const res = await fetch('/api/checkout', { method: 'POST' });
+        const data = await res.json();
+        if (data.url) {
+          window.location = data.url;
+        } else {
+          alert('Checkout failed');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('An error occurred during checkout.');
+      }
+    }
+  </script>
+</body>
 </html>
